@@ -8,19 +8,6 @@ import { CoffeeContainer } from "@/features/coffee/components/CoffeeContainer";
 import { Mp3Container } from "@/features/mp3-downloader/components/mp3-container";
 import { WeatherContainer } from "./features/weather/components/WeatherContainer";
 
-import { LoginContainer, ProtectedRoute, useAuth,UserBadge } from "@/features/login";
-
-const HeaderAuthArea = () => {
-  const { user, logout } = useAuth();
-  if (!user) return <Link to="/login">Login</Link>;
-  return (
-    <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-      <UserBadge user={user} />
-      <button onClick={logout}>Logout</button>
-    </div>
-  );
-};
-
 export const App = () => {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
@@ -36,12 +23,10 @@ export const App = () => {
             <li><Link to="/weather">Weather</Link></li>
             <li><Link to="/login">Login</Link></li>
           </ul>
-          <HeaderAuthArea />
         </nav>
 
         <Routes>
           <Route path="/" element={<h1>Home Page</h1>} />
-          <Route path="/login" element={<LoginContainer redirectTo="/" />} />
 
           <Route path="/todo" element={<TodoContainer />} />
           <Route path="/counter" element={<CounterContainer />} />
@@ -51,17 +36,13 @@ export const App = () => {
           <Route
             path="/mp3download"
             element={
-              <ProtectedRoute>
                 <Mp3Container />
-              </ProtectedRoute>
             }
           />
           <Route
             path="/weather"
             element={
-              <ProtectedRoute>
                 <WeatherContainer />
-              </ProtectedRoute>
             }
           />
 
