@@ -1,0 +1,28 @@
+/* src/components/listbox/listbox.module.css */
+.listbox {
+    height: 44px;                /* Buttonと並べても違和感が出にくい高さ */
+    padding: 0 12px;             /* px-3 相当 */
+    font-size: 1rem;             /* text-base */
+    border: 1px solid #cbd5e1;   /* slate-300 */
+    border-radius: 8px;          /* rounded-lg */
+    background: #fff;
+    transition: border-color .2s ease, box-shadow .2s ease;
+    appearance: none;            /* プラットフォーム差の吸収 */
+  }
+
+  .listbox:hover {
+    border-color: #94a3b8;       /* slate-400 */
+  }
+
+  .listbox:focus {
+    outline: none;
+    border-color: #3b82f6;       /* blue-500 */
+    box-shadow: 0 0 0 3px rgba(59,130,246,.25); /* focus ring */
+  }
+
+  .listbox:disabled {
+    cursor: not-allowed;
+    background: #f1f5f9;         /* slate-100 */
+    color: #94a3b8;              /* slate-400 */
+    border-color: #e2e8f0;       /* slate-200 */
+  }

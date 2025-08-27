@@ -1,0 +1,21 @@
+/* src/features/coffee/components/CoffeeContainer.module.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .searchSection {
+    margin-bottom: 1.5rem;
+  }
+
+  .loading {
+    color: #555;
+    font-style: italic;
+  }
+
+  .error {
+    color: #d33;
+    font-weight: bold;
+    margin-top: 1rem;
+  }

@@ -1,0 +1,35 @@
+.button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+
+  .primary {
+    background-color: #3182ce;
+  }
+  .primary:hover {
+    background-color: #2b6cb0;
+  }
+
+  .secondary {
+    background-color: #718096;
+  }
+  .secondary:hover {
+    background-color: #4a5568;
+  }
+
+  .danger {
+    background-color: #e53e3e;
+  }
+  .danger:hover {
+    background-color: #c53030;
+  }
+
+  /* button.module.css に追加例 */
+.bold { font-weight: bold; }
+.emphasis { font-weight: 700; letter-spacing: .01em; }
+.green { background-color: #10b981; }
+.green:hover { background-color: #059669; }
