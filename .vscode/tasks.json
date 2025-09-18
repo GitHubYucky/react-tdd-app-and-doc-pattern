@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev-all",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "pattern": { "regexp": "." },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "vite|concurrently",
+            "endsPattern": "Local:\\s+https?://(?:localhost|127\\.0\\.0\\.1):\\d+|Debugger listening on ws://"
+          }
+        }
+      ],
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated",
+        "clear": false
+      },
+      "group": "build"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Chrome: Vite dev",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "userDataDir": true,
+      "sourceMapPathOverrides": {
+        "vite:///*": "${webRoot}/*",
+        "/*": "${webRoot}/*"
+      },
+      "preLaunchTask": "dev-all",
+      "serverReadyAction": {
+        "pattern": "Local:\\s+(https?://(localhost|127\\.0\\.0\\.1):\\d+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      }
+    },
+    {
+      "name": "Attach: Node API (9229)",
+      "type": "pwa-node",
+      "request": "attach",
+      "port": 9229,
+      "restart": true
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Dev: Frontend + API",
+      "configurations": ["Chrome: Vite dev", "Attach: Node API (9229)"],
+      "stopAll": true
+    }
+  ]
+}
