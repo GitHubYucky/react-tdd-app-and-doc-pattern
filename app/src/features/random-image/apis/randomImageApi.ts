@@ -1,12 +1,10 @@
-// src/apis/randomImageApi.ts
+import type { Request, Response } from "express";
 
 // ランダム画像のURLを取得する純粋な関数
 export async function fetchRandomImageUrl(): Promise<string> {
     const response = await fetch('https://picsum.photos/800');
     return response.url; // 画像URLだけ返す
   }
-// src/features/echo/apis/echo-api.ts
-import type { Request, Response } from "express";
 
 export const randomImageHandler = async (req: Request, res: Response) => {
   if (req.method !== "POST") {
