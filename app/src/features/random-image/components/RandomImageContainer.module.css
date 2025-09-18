@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央寄せ */
+    gap: 16px; /* 画像とボタンの間に余白 */
+    padding: 24px;
+    background-color: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    width: 840px; /* 画像幅に合わせる（+余白） */
+    margin: 0 auto; /* ページ中央に配置 */
+  }
+
+  .button {
+    width: 200px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }

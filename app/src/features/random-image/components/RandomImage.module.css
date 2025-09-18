@@ -1,0 +1,65 @@
+/* 通常の画像 */
+.image {
+    width: 800px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* ローディング中の枠 */
+  .loading {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(
+      -45deg,
+      #eee,
+      #eee 20px,
+      #f5f5f5 20px,
+      #f5f5f5 40px
+    );
+    color: #555;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    animation: shimmer 1.2s infinite linear;
+  }
+
+  /* エラー時の枠 */
+  .error {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffecec;
+    border: 2px dashed #ff4d4d;
+    color: #d8000c;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+
+  /* No image の場合 */
+  .noImage {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    color: #777;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  /* shimmer animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -800px 0;
+    }
+    100% {
+      background-position: 800px 0;
+    }
+  }
