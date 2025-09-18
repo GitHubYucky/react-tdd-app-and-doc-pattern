@@ -2,8 +2,6 @@
 import type { Request, Response } from "express";
 import fetch from "node-fetch";
 
-
-debugger;
 export const mp3Handler = async (req: Request, res: Response) => {
   try {
     const id = (req.query.id ?? "").toString().trim();
